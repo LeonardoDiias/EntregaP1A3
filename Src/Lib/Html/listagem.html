@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Grid</title>
+    <style>
+      .game-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .game-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      .game-title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .game-progress {
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Game Name</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Game 1</td>
+          <td>Zerado</td>
+        </tr>
+        <tr>
+          <td>Game 2</td>
+          <td>Jogando</td>
+        </tr>
+        <tr>
+          <td>Game 3</td>
+          <td>Jogado</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
