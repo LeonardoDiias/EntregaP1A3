@@ -1,52 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Game Grid</title>
-    <style>
-      .game-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-
-      .game-item {
-        border: 1px solid #ccc;
-        padding: 10px;
-      }
-
-      .game-title {
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      .game-progress {
-        font-size: 14px;
-        color: #888;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="../Js/Listagem.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../Css/Listagem.css" />
+    <title>Listagem</title>
   </head>
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Game Name</th>
-          <th>Progress</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Game 1</td>
-          <td>Zerado</td>
-        </tr>
-        <tr>
-          <td>Game 2</td>
-          <td>Jogando</td>
-        </tr>
-        <tr>
-          <td>Game 3</td>
-          <td>Jogado</td>
-        </tr>
-      </tbody>
-    </table>
+    <nav>
+      <div class="logo">
+        <a href="Home.html"><img src="../Image/LogoMenor.png" alt="" /></a>
+      </div>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a id="usuario"></a></li>
+        <i class="fa-solid fa-arrow-right-from-bracket fa-lg"  onclick="sair()"></i>
+    </nav>
+    <section class="space">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Status</th>
+              <th>Plataforma</th>
+            </tr>
+          </thead>
+          <tbody id="gridJogo">
+            <tr id="item1">
+              <td>1</td>
+              <td>Spider-Man Miles Morales</td>
+              <td>Zerando</td>
+              <td>Xbox / Playstation / PC</td>
+            </tr>
+            <tr id="item2">
+              <td>2</td>
+              <td>Gran Turismo</td>
+              <td>Zerando</td>
+              <td>Xbox / Playstation / PC</td>
+            </tr>
+            <tr id="item3">
+              <td>3</td>
+              <td>The Witcher 3</td>
+              <td>Zerando</td>
+              <td>Xbox / Playstation / PC</td>
+            </tr>
+            <tr id="item4">
+              <td>4</td>
+              <td>Call of Duty</td>
+              <td>Zerado</td>
+              <td>Xbox / Playstation / PC</td>
+            </tr>
+            <tr id="item5">
+              <td>5</td>
+              <td>Street Figther</td>
+              <td>Não Recomendado</td>
+              <td>Xbox / Playstation / PC</td>
+            </tr>
+          </tbody>
+        </table>
+      <section class="row">
+        <div class="label-float">
+          <input type="text" id="novoJ" paceholder="" required />
+          <label id="jogo" for="usuario">Nome Jogo</label>
+        </div>
+        <div class="label-float espaçamento">
+          <input type="text" id="novoS" paceholder="" required />
+          <label id="status" for="usuario">Status</label>
+        </div>
+        <div class="label-float espaçamento">
+          <input type="text" id="novaP" paceholder="" required />
+          <label id="plataforma" for="usuario">Plataforma</label>
+        </div>
+        <button class="btn espaçamento" onclick="adicionarjogo()">Adicionar Jogo</button>
+      </section>
+    </section>
   </body>
 </html>
